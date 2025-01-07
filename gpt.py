@@ -11,7 +11,7 @@ class GPT:
 
     @staticmethod
     def count_tokens(prompt):
-        tokenizer = AutoTokenizer.from_pretrained("mistralai/Mistral-7B-Instruct-v0.1")
+        tokenizer = AutoTokenizer.from_pretrained("IlyaGusev/saiga_mistral_7b_gguf")
         return len(tokenizer.encode(prompt))
 
     def process_resp(self, response) -> [bool, str]:

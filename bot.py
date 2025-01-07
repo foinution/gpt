@@ -17,4 +17,4 @@ def checkgpt(message):
 	bot.send_message(message.chat.id, response[1])
 	gpt_dialog(message)
 
-bot.infinity_polling()
+bot.polling()
