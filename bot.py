@@ -1,6 +1,6 @@
 import telebot
 from gpt import GPT
-bot = telebot.TeleBot('7806558234:AAGA-un5fwEIuOwTzClJqugk_1hwDPzVX1E')
+bot = telebot.TeleBot('')
 
 @bot.message_handler(commands=['start'])
 def gpt_dialog(message):
