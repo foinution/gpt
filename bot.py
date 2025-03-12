@@ -1,6 +1,6 @@
 import telebot
 from gpt import GPT
-bot = telebot.TeleBot('')
+bot = telebot.TeleBot('7806558234:AAGA-un5fwEIuOwTzClJqugk_1hwDPzVX1E')
 
 @bot.message_handler(commands=['start'])
 def gpt_dialog(message):
@@ -17,4 +17,4 @@ def checkgpt(message):
 	bot.send_message(message.chat.id, response[1])
 	gpt_dialog(message)
 
-bot.polling()
+bot.infinity_polling()

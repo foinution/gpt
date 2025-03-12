@@ -2,12 +2,12 @@ import requests
 from transformers import AutoTokenizer
 
 class GPT:
-    def __init__(self, system_content="Ты - чат-бот. Отвечай на русском языке."):
-        self.system_content = "Ты - чат-бот. Отвечай на русском языке."
+    def __init__(self, system_content="Ты - профессиональный помощник для написания статей на любые темы. Пиши на русском языке."):
+        self.system_content = "Ты - профессиональный помощник для написания статей на любые темы. Пиши на русском языке."
         self.URL = 'http://localhost:1234/v1/chat/completions'
         self.HEADERS = {"Content-Type": "application/json"}
-        self.MAX_TOKENS = 150
-        self.assistant_content = "Ответ: "
+        self.MAX_TOKENS = 1000
+        self.assistant_content = ""
 
     @staticmethod
     def count_tokens(prompt):
@@ -58,4 +58,4 @@ class GPT:
         self.assistant_content += content_response
 
     def clear_history(self):
-        self.assistant_content = "Ответ: "
+        self.assistant_content = ""
